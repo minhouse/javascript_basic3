@@ -5,13 +5,14 @@ function displayTasks() {
   console.log("現在の持っているタスクの一覧\n");
   console.log("==========================\n");
 
-  var ary = ["掃除", "買い物", "散歩"];
+  const ary = ["掃除", "買い物", "散歩"];
 
-  for (var i = 0; i < ary.length; i++) {
-    console.log(ary[i] + "\n");
-  }
+  //配列の要素を順番に処理する場合はforEachを使う
+  ary.forEach(function (value) {
+    console.log(value + "\n");
+  });
 
-  var userinput = prompt(
+  let userinput = prompt(
     "確認、追加、削除、終了の４つのいずれかを入力してください"
   );
   if (userinput !== null && userinput !== "") {
@@ -19,9 +20,10 @@ function displayTasks() {
     console.log("==========================\n");
     console.log("現在の持っているタスクの一覧\n");
     console.log("==========================\n");
-    for (var i = 0; i < ary.length; i++) {
-      console.log(ary[i] + "\n");
-    }
+    //配列の要素を順番に処理する場合はforEachを使う
+    ary.forEach(function (value) {
+      console.log(value + "\n");
+    });
   } else {
     console.log("入力がありませんでした。");
   }
