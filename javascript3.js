@@ -12,7 +12,7 @@ function displayTasks() {
     console.log(value + "\n");
   });
 
-  let userinput = prompt(
+  const userinput = prompt(
     "確認、追加、削除、終了の４つのいずれかを入力してください"
   );
   if (userinput !== null && userinput !== "") {
